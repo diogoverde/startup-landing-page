@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useEffect } from "react";
+import { useLocation, Switch } from "react-router-dom";
+import AppRoute from "./utils/AppRoute";
+import Home from "./views/Home";
+import LayoutDefault from "./layouts/LayoutDefault";
+import ScrollReveal from "./utils/ScrollReveal";
 
-function App() {
+const App = () => {
+  const childRef = useRef();
+  let location = useLocation();
+
+  useEffect(() => {
+    document.body.classList.add("is-loaded");
+    childRef.current.init();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ScrollReveal
+      ref={childRef}
+      children={() => (
+        <Switch>
+          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+        </Switch>
+      )}
+    />
   );
-}
+};
 
 export default App;

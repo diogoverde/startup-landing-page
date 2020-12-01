@@ -5,6 +5,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserHistory } from "history";
 
+import "./assets/scss/style.scss";
+
 const history = createBrowserHistory();
 
 ReactDOM.render(

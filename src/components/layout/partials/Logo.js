@@ -11,7 +11,7 @@ const Logo = ({ className, ...props }) => {
       <h1 className="m-0">
         <Link to="/">
           <Image
-            src={require("./../../../assets/images/logo.svg")}
+            src="https://startup-landing-page.s3.eu-west-2.amazonaws.com/logo.svg"
             alt="Open"
             width={32}
             height={32}

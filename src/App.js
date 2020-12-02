@@ -4,6 +4,7 @@ import AppRoute from "./utils/AppRoute";
 import Home from "./views/Home";
 import LayoutDefault from "./layouts/LayoutDefault";
 import ScrollReveal from "./utils/ScrollReveal";
+import Testimonial from "./components/sections/Testimonial";
 
 const App = () => {
   const childRef = useRef();
@@ -21,6 +22,7 @@ const App = () => {
       children={() => (
         <Switch>
           <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+          <AppRoute exact path="/testimonials" component={Testimonial} layout={LayoutDefault} />
         </Switch>
       )}
     />

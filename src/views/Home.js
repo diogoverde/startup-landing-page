@@ -11,8 +11,8 @@ const Home = () => {
       <Hero className='illustration-section-01'/>
       <FeatureTiles />
       <FeaturesSplit invertMobile topDivider imageFill className="illustration-section-02" />
-      <Testimonial />
-      <Cta />
+      <Testimonial topDivider />
+      <Cta split />
     </>
   );
 };

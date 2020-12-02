@@ -141,7 +141,6 @@ const FeaturesSplit = ({
                   height={396} />
               </div>
             </div>
-
           </div>
         </div>
       </div>

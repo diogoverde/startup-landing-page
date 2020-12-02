@@ -82,6 +82,7 @@ const ScrollReveal = React.forwardRef((props, ref) => {
   }, [viewportHeight]);
 
   return <>{props.children()}</>;
+  
 });
 
 ScrollReveal.propTypes = {
